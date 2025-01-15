@@ -1,0 +1,48 @@
+# Xcode
+DerivedData/
+.idea/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# Build artifacts
+build/
+*.app
+*.ipa
+*.dSYM
+*.xcarchive
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# xcresult bundles
+*.xcresult
+
+# Other
+*.swp
+*.lock
+*.DS_Store
+*.or
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.orig
