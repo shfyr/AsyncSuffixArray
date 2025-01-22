@@ -1,5 +1,5 @@
 //
-//  TextFieldView.swift
+//  TextFieldScreen.swift
 //  SuffixArray
 //
 //  Created by Elizaveta on 19.12.2024.
@@ -48,7 +48,6 @@ struct TextFieldScreen: View {
                         .background(.yellow)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
-                
             }
             Button {
                 path.append(.history)
@@ -59,14 +58,13 @@ struct TextFieldScreen: View {
                     .frame(width: 150, height: 50)
                     .background(.mint)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                  
             }
         }
 
         .padding(.horizontal, 5)
         .navigationTitle("Find all Suffixes")
     }
-    
+
     private func saveSearchWord(_ word: String) {
         var savedWords = UserDefaults.standard.array(forKey: "searchHistory") as? [String] ?? []
         savedWords.append(word)

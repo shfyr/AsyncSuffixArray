@@ -15,7 +15,7 @@ final class TimerManager: ObservableObject {
     func startTimer() {
         if timerIsActive { return }
         timerIsActive = true
-        self.secondsUntilNextExecution = 20
+        secondsUntilNextExecution = 20
 
         Task {
             while timerIsActive {
@@ -29,4 +29,3 @@ final class TimerManager: ObservableObject {
         timerIsActive = false
     }
 }
-

@@ -13,5 +13,3 @@ struct Job {
     let task: (_: String) async -> Void
     var duration: TimeInterval?
 }
-
-

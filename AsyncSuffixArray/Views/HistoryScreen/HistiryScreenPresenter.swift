@@ -7,6 +7,4 @@
 
 import Combine
 
-class HistoryScreenPresenter {
-
-}
+class HistoryScreenPresenter {}
