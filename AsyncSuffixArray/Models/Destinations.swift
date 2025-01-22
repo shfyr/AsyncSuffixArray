@@ -7,6 +7,7 @@
 
 enum Destinations: Hashable {
     case result(destination: ResultDestination)
+    case history
 }
 
 struct ResultDestination: Hashable {

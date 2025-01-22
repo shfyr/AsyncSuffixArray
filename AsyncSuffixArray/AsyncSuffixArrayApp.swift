@@ -19,6 +19,8 @@ struct AsyncSuffixArrayApp: App {
                         switch destination {
                         case let .result(resultDestination):
                             ResultScreen(presenter: ResultScreenPresenter(text: resultDestination.word))
+                        case .history:
+                            HistoryScreen()
                         }
                     }
             }

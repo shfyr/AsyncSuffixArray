@@ -12,7 +12,7 @@ struct TextFieldScreen: View {
     @Binding var path: [Destinations]
 
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .center, spacing: 50) {
             HStack(alignment: .center, spacing: 3) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -32,6 +32,7 @@ struct TextFieldScreen: View {
                 .frame(height: 70)
 
                 Button {
+                    saveSearchWord(word)
                     path.append(
                         .result(
                             destination: ResultDestination(word: word)
@@ -47,10 +48,29 @@ struct TextFieldScreen: View {
                         .background(.yellow)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
+                
+            }
+            Button {
+                path.append(.history)
+            } label: {
+                Text("History")
+                    .foregroundColor(.yellow)
+                    .font(.title3)
+                    .frame(width: 150, height: 50)
+                    .background(.mint)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                  
             }
         }
+
         .padding(.horizontal, 5)
         .navigationTitle("Find all Suffixes")
+    }
+    
+    private func saveSearchWord(_ word: String) {
+        var savedWords = UserDefaults.standard.array(forKey: "searchHistory") as? [String] ?? []
+        savedWords.append(word)
+        UserDefaults.standard.setValue(savedWords, forKey: "searchHistory")
     }
 }
 
